@@ -1,0 +1,49 @@
+/*
+Project Name: DOM Clock
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+
+@import 'base/reset.css';
+@import 'base/base.css';
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.clock  {
+  font-family: 'Helvetica Neue';
+  letter-spacing: 0.01em;
+  font-size: 5em;
+  font-weight: 100;
+  color: #ffc;
+  opacity: 0.8;
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  transform: translate(-50%,-50%);
+}
+
+.dateElem {
+  position: relative;
+  text-align: center;
+  font-size: 0.5em;
+  margin-top: 30px;
+}
+
+.clouds {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAABmCAMAAAAOARRQAAAAllBMVEX///8AevsAePunxf14qfwRffsNfPsAdvoAefoAdfsAd/rw9//8/f/K4P7P4/4ggvteofz2+v/m8P5op/yrz/7c6v7s9f9bnvw0jvuPt/2TwP1spvx1rvy41v5yq/wthvtKmPyMu/230/3V6P6awvzA3P6lyv0qivxin/ygyf1Gk/yx1P5Umvy81f6Vuv3F3v59tv2PwP1F045QAAADTElEQVRoge2YbZOaMBDH2fR2CYIEeRAVFM6H40Q9r9//y3W5Tqe1BuSAdqZTfu9IQv6Tze4mG8MYGRkZGRkZGfmv2IWrNH16el+ddn9Kwtm9FwqRCIAQ1eI9coYXmV9yU1YSUgghWYmEdZ7aw4o4h0ACgqnOm7f9l/1yk6NJCLiZDirznPGkIg8j364s5dj+bl9OuK34OpzIPGcboefe7oVzPRMQbIYyXJQDUr7W9BxLQun53z/8yHWnrhvNu3lGdAbEja/vCyqduWHY66W3QGFKtfDe1h0W6MQ80/OsptdOLZSBEcaZqLyPPnwxi8NPrygVrNLQH7BFi2p+VFlWZJnC6qP8ZPiuCSltGjBjuyHKLNlf2XjG/LpPCoFAL3UG0OHHALF+X34QlZwV0sPPWWfXFHlttYbW8IKU6Xzsdky2vZ1yti7YbZpMfYvPEdNosg80bsg/ohW2lbkIVN1yMYd0+18DIK+TimG4C6BNu+1xEK1HO1PLkbf10Grk1EL8jF/eMHslmbb6+6sAr/vZdeLlRG0GbkA+d5dxMjS3bQbmYLZ2Sg0BwONoYEoyLz1kQpPKNuMKsvqcwq6Fqp2Mee0h4/Mh8djV3ERhL6PZFtL5QdzZ6YRPEnHsIeObPIPpNTl1FJt8QUr2fW6X9j7JAMXCrVc5E4p8O+8h8iE09SYIizo/sj2+AKTNx1lLoZUgKGvslppIqwFEKkKFwtOahVOmaBW/rTjy/rzoOmKCvO+2/IIHpDSp8aAI+8TL70SEutyYAgRDlhTOs4T8rtVnZ9basjNTRcVdAE4LKIatW/iyr06/N14UlAM6AGNvAO/iYysoHlTFMJYSlhqZ14Fl3qS8l5F/ZTUXHDQ4mVkK97mLPa0hd3eBQ0TdxedfihsjHbA+rnBWAjRXnJMiNWR8+nyn2Gvac4DzgMsJJOoytHEwcdK+1nrEiYtk3WJYX+BgXnApSMb6APFLrrVWnWuOX3BCRfXxsSv5KDpP+wrNosBCKOqrKTev7mlp6HbPB/Zuu8wkygYVtlvAd0aJizh56kbyWipJNPGaM4qzLrF6cISufLxWZi1eO05JWSCIbkjMyuTYrtiLDuHLl46E6z/x6DoyMjIyMjIyMvIv8w26kzZb0YY5TwAAAABJRU5ErkJggg==')
+}
+
+.clear {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAABmCAMAAAAOARRQAAAAllBMVEX///8AevsAePunxf14qfwRffsNfPsAdvoAefoAdfsAd/rw9//8/f/K4P7P4/4ggvteofz2+v/m8P5op/yrz/7c6v7s9f9bnvw0jvuPt/2TwP1spvx1rvy41v5yq/wthvtKmPyMu/230/3V6P6awvzA3P6lyv0qivxin/ygyf1Gk/yx1P5Umvy81f6Vuv3F3v59tv2PwP1F045QAAADTElEQVRoge2YbZOaMBDH2fR2CYIEeRAVFM6H40Q9r9//y3W5Tqe1BuSAdqZTfu9IQv6Tze4mG8MYGRkZGRkZGfmv2IWrNH16el+ddn9Kwtm9FwqRCIAQ1eI9coYXmV9yU1YSUgghWYmEdZ7aw4o4h0ACgqnOm7f9l/1yk6NJCLiZDirznPGkIg8j364s5dj+bl9OuK34OpzIPGcboefe7oVzPRMQbIYyXJQDUr7W9BxLQun53z/8yHWnrhvNu3lGdAbEja/vCyqduWHY66W3QGFKtfDe1h0W6MQ80/OsptdOLZSBEcaZqLyPPnwxi8NPrygVrNLQH7BFi2p+VFlWZJnC6qP8ZPiuCSltGjBjuyHKLNlf2XjG/LpPCoFAL3UG0OHHALF+X34QlZwV0sPPWWfXFHlttYbW8IKU6Xzsdky2vZ1yti7YbZpMfYvPEdNosg80bsg/ohW2lbkIVN1yMYd0+18DIK+TimG4C6BNu+1xEK1HO1PLkbf10Grk1EL8jF/eMHslmbb6+6sAr/vZdeLlRG0GbkA+d5dxMjS3bQbmYLZ2Sg0BwONoYEoyLz1kQpPKNuMKsvqcwq6Fqp2Mee0h4/Mh8djV3ERhL6PZFtL5QdzZ6YRPEnHsIeObPIPpNTl1FJt8QUr2fW6X9j7JAMXCrVc5E4p8O+8h8iE09SYIizo/sj2+AKTNx1lLoZUgKGvslppIqwFEKkKFwtOahVOmaBW/rTjy/rzoOmKCvO+2/IIHpDSp8aAI+8TL70SEutyYAgRDlhTOs4T8rtVnZ9basjNTRcVdAE4LKIatW/iyr06/N14UlAM6AGNvAO/iYysoHlTFMJYSlhqZ14Fl3qS8l5F/ZTUXHDQ4mVkK97mLPa0hd3eBQ0TdxedfihsjHbA+rnBWAjRXnJMiNWR8+nyn2Gvac4DzgMsJJOoytHEwcdK+1nrEiYtk3WJYX+BgXnApSMb6APFLrrVWnWuOX3BCRfXxsSv5KDpP+wrNosBCKOqrKTev7mlp6HbPB/Zuu8wkygYVtlvAd0aJizh56kbyWipJNPGaM4qzLrF6cISufLxWZi1eO05JWSCIbkjMyuTYrtiLDuHLl46E6z/x6DoyMjIyMjIyMvIv8w26kzZb0YY5TwAAAABJRU5ErkJggg==');
+  width: 100px;
+  height: 100px;
+
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
